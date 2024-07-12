@@ -10,10 +10,9 @@
             margin: 0;
             padding: 0;
             display: flex;
-            flex-direction: column;
-            min-height: 100vh;
             justify-content: center;
             align-items: center;
+            min-height: 100vh;
             background-color: #f9f9f9;
         }
         .container {
@@ -24,6 +23,10 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             max-width: 400px;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 300px; /* 设置一个固定的高度以确保页脚在框内 */
         }
         h1 {
             margin-top: 20px;
@@ -53,9 +56,7 @@
             background-color: #f1f1f1;
             color: #666;
             font-size: 14px;
-            width: 100%;
-            position: absolute;
-            bottom: 0;
+            border-radius: 0 0 10px 10px;
         }
     </style>
 </head>
@@ -66,9 +67,9 @@
             <a href="https://example.com/download-qi-sou-cloud" class="button">下载七嗖云盘</a>
             <a href="https://example.com/download-qi-sou-cloud-plus" class="button">下载七嗖云盘PLUS</a>
         </div>
+        <footer>
+            七嗖云科技 2023-2024版权所有
+        </footer>
     </div>
-    <footer>
-        七嗖云科技 2023-2024版权所有
-    </footer>
 </body>
 </html>
