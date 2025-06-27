@@ -202,27 +202,7 @@
                 padding: 20px 4vw 18px 4vw;
             }
         }
-    </style>
-    <script>
-        // 打开页面时尝试全屏
-        document.addEventListener("DOMContentLoaded", function() {
-            function launchFullScreen(element) {
-                if(element.requestFullscreen) {
-                    element.requestFullscreen();
-                } else if(element.mozRequestFullScreen) {
-                    element.mozRequestFullScreen();
-                } else if(element.webkitRequestFullscreen) {
-                    element.webkitRequestFullscreen();
-                } else if(element.msRequestFullscreen){
-                    element.msRequestFullscreen();
-                }
-            }
-            // 只在桌面端自动全屏，移动端需用户手势
-            if (window.innerWidth > 700) {
-                launchFullScreen(document.documentElement);
-            }
-        });
-    </script>
+    </style>    
 </head>
 <body>
     <div class="header">
@@ -232,6 +212,7 @@
         <div class="scroll-down-wrap">
             <span class="scroll-down" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">&#8595;</span>
             <span class="scroll-label">我们的产品</span>
+            <span class="scroll-down" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">&#8595;</span>
         </div>
     </div>
     <div class="projects-section" id="projects">
