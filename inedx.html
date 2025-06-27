@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>七嗖云服务首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: "微软雅黑", Arial, sans-serif;
+            background: #f7f9fb;
+            color: #222;
+        }
+        .header {
+            background: linear-gradient(120deg, #4f8cff 0%, #1ec8e1 100%);
+            color: #fff;
+            padding: 60px 0 40px 0;
+            text-align: center;
+            position: relative;
+        }
+        .logo-placeholder {
+            width: 64px;
+            height: 64px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: inline-block;
+            vertical-align: middle;
+            margin-bottom: 12px;
+            background-image: url('');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 3em;
+            letter-spacing: 4px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .header p {
+            margin: 20px 0 0 0;
+            font-size: 1.5em;
+            opacity: 0.85;
+        }
+        .scroll-down {
+            margin-top: 40px;
+            font-size: 2em;
+            animation: bounce 1.5s infinite;
+            color: #fff;
+            cursor: pointer;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0);}
+            50% { transform: translateY(15px);}
+        }
+        .projects-section {
+            padding: 60px 20px 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .projects-title {
+            font-size: 2em;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #333;
+        }
+        .projects-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        .project-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+            padding: 30px 24px;
+            width: 320px;
+            transition: box-shadow 0.2s;
+            text-align: center;
+            position: relative;
+        }
+        .project-logo-placeholder {
+            width: 48px;
+            height: 48px;
+            background: #e0e7ef;
+            border-radius: 50%;
+            margin: 0 auto 16px auto;
+            background-image: url('');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .project-title {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            color: #1976d2;
+        }
+        .project-desc {
+            font-size: 1em;
+            color: #555;
+            margin-bottom: 18px;
+        }
+        .join-btn {
+            background: linear-gradient(90deg, #4f8cff 0%, #1ec8e1 100%);
+            color: #fff;
+            border: none;
+            border-radius: 24px;
+            padding: 10px 32px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .join-btn:hover {
+            background: linear-gradient(90deg, #1ec8e1 0%, #4f8cff 100%);
+        }
+        .footer {
+            background: #f0f3f8;
+            color: #888;
+            text-align: center;
+            padding: 24px 10px 16px 10px;
+            font-size: 0.98em;
+            margin-top: 60px;
+            border-top: 1px solid #e0e7ef;
+        }
+        @media (max-width: 700px) {
+            .projects-list {
+                flex-direction: column;
+                align-items: center;
+            }
+            .project-card {
+                width: 95%;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .header p {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <span class="logo-placeholder" title="Logo"></span>
+        <h1>七嗖云</h1>
+        <p>让企业与个人的云服务更简单高效</p>
+        <div class="scroll-down" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">&#8595;</div>
+    </div>
+    <div class="projects-section" id="projects">
+        <div class="projects-title">我们的项目</div>
+        <div class="projects-list">
+            <div class="project-card">
+                <div class="project-logo-placeholder" title="银杏云盘Logo"></div>
+                <div class="project-title">银杏云盘</div>
+                <div class="project-desc">
+                    原七嗖云盘，战略升级后更名为银杏云盘，M365强悍存储，祝你上云畅快！
+                </div>
+                <button class="join-btn" onclick="window.open('https://cloud.7so.top','_blank')">体验一下</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        七嗖云 2023-2025 &nbsp;|&nbsp;
+        商业合作：<a href="mailto:jackyan1660@qq.com">jackyan1660@qq.com</a> &nbsp;|&nbsp;
+        违规举报：<a href="mailto:jb@7so.top">jb@7so.top</a>
+    </div>
+</body>
+</html>
