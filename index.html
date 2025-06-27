@@ -20,9 +20,15 @@
         .header {
             background: linear-gradient(120deg, #4f8cff 0%, #1ec8e1 100%);
             color: #fff;
-            padding: 60px 0 40px 0;
+            min-height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
             position: relative;
+            box-sizing: border-box;
         }
         .logo-placeholder {
             width: 64px;
@@ -49,12 +55,28 @@
             font-size: 1.5em;
             opacity: 0.85;
         }
+        .scroll-down-wrap {
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
         .scroll-down {
-            margin-top: 40px;
-            font-size: 2em;
+            font-size: 2.2em;
             animation: bounce 1.5s infinite;
             color: #fff;
             cursor: pointer;
+            display: inline-block;
+        }
+        .scroll-label {
+            font-size: 1.2em;
+            color: #fff;
+            opacity: 0.92;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 6px;
+            letter-spacing: 2px;
         }
         @keyframes bounce {
             0%, 100% { transform: translateY(0);}
@@ -167,7 +189,7 @@
         }
         @media (max-width: 500px) {
             .header {
-                padding: 36px 0 24px 0;
+                padding: 0;
             }
             .projects-section {
                 padding: 30px 0 20px 0;
@@ -207,7 +229,10 @@
         <span class="logo-placeholder" title="Logo"></span>
         <h1>七嗖云</h1>
         <p>让企业与个人的云服务更简单高效</p>
-        <div class="scroll-down" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">&#8595;</div>
+        <div class="scroll-down-wrap">
+            <span class="scroll-down" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">&#8595;</span>
+            <span class="scroll-label">我们的产品</span>
+        </div>
     </div>
     <div class="projects-section" id="projects">
         <div class="projects-title">我们的项目</div>
@@ -215,6 +240,7 @@
             <div class="project-card">
                 <div class="project-logo-img" style="background-image:url('https://jsd-pro.yanjie233.top/gh/yanjie233/picx-images-hosting@master/new/17cb1f026effd86c394def4922ec719.5fqht88cp8s0.webp');"></div>
                 <div class="project-title">银杏云盘</div>
+                <span class="beta-badge">众测版</span>
                 <div class="project-desc">
                     原七嗖云盘，战略升级后更名为银杏云盘，M365强悍存储，祝你上云畅快！
                 </div>
@@ -223,7 +249,7 @@
             <div class="project-card">
                 <div class="project-logo-img" style="background-image:url('https://jsd-pro.yanjie233.top/gh/yanjie233/picx-images-hosting@master/coffeine/Caffeine.2vevq0lfy3.webp');"></div>
                 <div>
-                    <span class="project-title">咖啡因-防休眠</span>
+                    <span class="project-title">咖啡因</span>
                     <span class="beta-badge">测试版</span>
                 </div>
                 <div class="project-desc">
